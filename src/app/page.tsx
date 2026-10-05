@@ -4,6 +4,11 @@ import prisma from "../lib/db";
 // import { Button } from "@base-ui/react";
 //how 2 buttons?
 
+/**
+ * Queries all users before returning the home page's static button UI.
+ * The query results are not displayed. Database query errors reject the
+ * returned promise without a fallback UI.
+ */
 export const abc = async() => {
   const something = true;
   const users = await prisma.user.findMany();
